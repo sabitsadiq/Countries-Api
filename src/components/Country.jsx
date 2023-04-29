@@ -25,7 +25,7 @@ function Country() {
   }, []);
   return (
     <>
-      <Search onSelect={getCountryBySearch} />
+      <Search onSearch={getCountryBySearch} />
       <div className="flag-section">
         {countries &&
           countries.map((country, index) => {
