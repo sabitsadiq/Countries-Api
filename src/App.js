@@ -58,10 +58,6 @@ function App() {
           onKeyUp={handleChange}
         />
       </div> */}
-      <div className="searchContainer">
-        {/* <FilterCountry onSelect={getFilterCountry} /> */}
-        <FilterCountry />
-      </div>
 
       <Country />
     </div>

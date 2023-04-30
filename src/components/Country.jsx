@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "./Search";
+import FilterCountry from "./FilterCountry";
 
 function Country() {
   const [countries, setCountries] = useState("");
@@ -12,6 +13,15 @@ function Country() {
       .then((response) => {
         setCountries(response.data);
       })
+      .catch((error) => console.log(error));
+  };
+  const getCountryByFilter = async (selectRegion) => {
+    axios
+      .get(`https://restcountries.com/v3.1/region/${selectRegion}`)
+      .then((res) => {
+        setCountries(res.data);
+      })
+
       .catch((error) => console.log(error));
   };
 
@@ -25,7 +35,11 @@ function Country() {
   }, []);
   return (
     <>
-      <Search onSearch={getCountryBySearch} />
+      <div className="searchContainer">
+        <Search onSearch={getCountryBySearch} />
+        <FilterCountry onSelect={getCountryByFilter} />
+      </div>
+
       <div className="flag-section">
         {countries &&
           countries.map((country, index) => {

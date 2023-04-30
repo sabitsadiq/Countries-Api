@@ -18,17 +18,11 @@
 .navbar-text {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  /* width: 100%; */
   font-weight: 800;
   padding: 1.6rem 1.2rem;
 }
-.dark {
-  background-color: #333;
-  color: #fff;
-}
-.light {
-  background-color: #fff;
-}
+
 .search-container {
   margin: 1.2rem;
   height: 3rem;
@@ -76,65 +70,4 @@ img {
 }
 .country-info p {
   margin: 5px 0px;
-}
-@media screen and (min-width: 768px) {
-  .searchContainer {
-    display: flex;
-    /* border: 2px solid red; */
-    align-items: center;
-    justify-content: space-between;
-  }
-  .searchContainer input {
-    width: 285px;
-    height: 45px;
-  }
-  .filter-container {
-    width: 27%;
-  }
-  .flag-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 1.5rem;
-  }
-  .country-container {
-    /* border: 2px solid red; */
-    width: 320px;
-    margin: 3rem auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .searchContainer {
-    padding: 0 2rem;
-  }
-  .flag-section {
-    padding: 0 2.5rem;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .country-container {
-    width: 220px;
-  }
-  .flag-container > img {
-    min-height: 150px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .navbar-text {
-    padding: 1.6rem 5rem;
-  }
-  .searchContainer {
-    padding: 0 3.5rem;
-    margin-top: 1.4rem;
-  }
-  .search-container {
-    width: 450px;
-  }
-  .search-container input {
-    width: 100%;
-  }
-  .filter-container {
-    width: 15%;
-  }
-  .country-container {
-    width: 250px;
-  }
 }
