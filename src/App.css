@@ -28,6 +28,7 @@
   position: fixed;
   top: 5rem;
   left: 0;
+  padding: 0 1rem;
 }
 .search-container {
   margin: 0 1.2rem;
@@ -93,9 +94,16 @@ img {
 }
 .single-country-flag {
   padding: 1.3rem 0;
+  margin-top: -9rem;
 }
 .single-country-info h1 {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 425px) {
+  .country-container-inner {
+    width: 350px;
+  }
 }
 @media screen and (min-width: 768px) {
   .searchContainer {
@@ -117,27 +125,47 @@ img {
   }
   .flag-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+    /* grid-gap: 1.5rem; */
+    /* border: 2px solid green; */
+    margin-top: 9rem;
   }
   .country-container {
-    /* border: 2px solid red; */
+    /* border: 2px solid blue; */
     margin: 2rem auto;
+  }
+  .country-container-inner {
+    width: 215px;
+    margin-top: 0;
+    /* border: 2px solid red; */
+  }
+  .single-country-container {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    margin: 12rem auto;
+    border: 2px solid red;
+  }
+  .single-country-flag {
+    border: 2px solid green;
+    width: 250px;
+    width: 250px;
   }
 }
 @media screen and (min-width: 1024px) {
   .searchContainer {
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
   }
   .flag-section {
     padding: 0 2.5rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .flag-container > img {
     min-height: 150px;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .navbar-text {
     padding: 1.6rem 5rem;
   }
@@ -155,11 +183,17 @@ img {
   .filter-container {
     width: 15%;
   }
-  .country-container {
-    width: 250px;
+  .country-container-inner {
+    width: 90%;
   }
   .flag-section {
     /* padding: 0 2.5rem; */
+    margin-top: 12rem;
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .country-container-inner {
+    width: 90%;
   }
 }

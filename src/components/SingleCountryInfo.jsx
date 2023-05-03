@@ -17,7 +17,7 @@ const SingleCountryInfo = () => {
     getSingleCountry();
   }, [name]);
   return (
-    <div className="flag-section">
+    <div className="">
       {country &&
         country.map((item, index) => {
           return (
