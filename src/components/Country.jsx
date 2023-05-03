@@ -4,6 +4,8 @@ import axios from "axios";
 import Search from "./Search";
 import FilterCountry from "./FilterCountry";
 
+import { Link } from "react-router-dom";
+
 function Country() {
   const [countries, setCountries] = useState("");
   const getCountryBySearch = async (search) => {
@@ -44,38 +46,42 @@ function Country() {
         {countries &&
           countries.map((country, index) => {
             return (
-              <section key={index}>
-                <div className="country-container">
-                  <div className="flag-container">
-                    <img
-                      className=""
-                      src={country.flags.png}
-                      alt={country.flags.alt}
-                    />
+              <Link to={`${country.name.common}`} className="link" key={index}>
+                <section>
+                  <div className="country-container">
+                    <div className="country-container-inner">
+                      <div className="flag-container">
+                        <img
+                          className=""
+                          src={country.flags.png}
+                          alt={country.flags.alt}
+                        />
+                      </div>
+                      <div className="country-info">
+                        <h1>{country.name.common}</h1>
+                        <span>
+                          <p>
+                            <strong>Population:</strong>
+                            {country.population}
+                          </p>
+                        </span>
+                        <span>
+                          <p>
+                            <strong>Region:</strong>
+                            {country.region}
+                          </p>
+                        </span>
+                        <span>
+                          <p>
+                            <strong>Capital:</strong>
+                            {country.capital}
+                          </p>
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="country-info">
-                    <h1>{country.name.common}</h1>
-                    <span>
-                      <p>
-                        <strong>Population:</strong>
-                        {country.population}
-                      </p>
-                    </span>
-                    <span>
-                      <p>
-                        <strong>Region:</strong>
-                        {country.region}
-                      </p>
-                    </span>
-                    <span>
-                      <p>
-                        <strong>Capital:</strong>
-                        {country.capital}
-                      </p>
-                    </span>
-                  </div>
-                </div>
-              </section>
+                </section>
+              </Link>
             );
           })}
       </div>
