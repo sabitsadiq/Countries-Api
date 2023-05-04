@@ -159,14 +159,15 @@ img {
     width: 215px;
     margin-top: 0;
   }
-  /* .single-country-container {
+  .single-country-container {
     display: flex;
     justify-content: center;
     gap: 3rem;
     padding: 0;
     width: 100%;
     height: 60vh;
-    margin-top: 6rem;
+    border: 2px solid red;
+    margin-top: -6rem;
   }
   .single-country-flag {
     width: 250px;
@@ -185,7 +186,7 @@ img {
   }
   .single-country-info h1 {
     margin-bottom: 0;
-  } */
+  }
 }
 @media screen and (min-width: 1024px) {
   .searchContainer {
