@@ -61,6 +61,14 @@ const SingleCountryInfo = () => {
                         {item.capital}
                       </p>
                     </span>
+                    <>
+                      <span>
+                        <p>
+                          <strong>Capital:</strong>
+                          {item.language}
+                        </p>
+                      </span>
+                    </>
                   </div>
                 </div>
               </section>

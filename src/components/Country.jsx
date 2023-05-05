@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "./Search";
 import FilterCountry from "./FilterCountry";
+import GridLoader from "react-spinners/GridLoader";
 
 import { Link } from "react-router-dom";
 
 function Country() {
-  const [countries, setCountries] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(false);
   const getCountryBySearch = async (search) => {
     axios
       .get(`https://restcountries.com/v3.1/name/${search}`)
@@ -32,6 +34,7 @@ function Country() {
       .get("https://restcountries.com/v3.1/all")
       .then((response) => {
         setCountries(response.data);
+        setLoading(true);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -43,7 +46,7 @@ function Country() {
       </div>
 
       <div className="flag-section">
-        {countries &&
+        {loading ? (
           countries.map((country, index) => {
             return (
               <Link to={`${country.name.common}`} className="link" key={index}>
@@ -83,7 +86,12 @@ function Country() {
                 </section>
               </Link>
             );
-          })}
+          })
+        ) : (
+          <div className="spinner-container">
+            <GridLoader color="#000" className="spinner" />
+          </div>
+        )}
       </div>
     </>
   );
