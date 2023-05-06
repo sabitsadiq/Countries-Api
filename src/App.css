@@ -9,9 +9,15 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
 }
-/* .app {
+.main-wrapper {
+  position: relative;
   background-color: hsl(0, 0%, 97.5%);
-} */
+}
+.spinner-container {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+}
 .navbar {
   position: fixed;
   top: 0px;
@@ -68,9 +74,9 @@ form {
 .flag-section {
   margin-top: 12.8rem;
 }
-.country-container-inner {
+.country-container {
   background-color: #fff;
-  width: 300px;
+  width: 83%;
   margin: 4rem auto;
   border-radius: 8px;
   box-shadow: 1px 1px 70px rgba(0 0 0 / 0.18);
@@ -78,8 +84,11 @@ form {
 img {
   border-radius: 8px 8px 0px 0px;
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 .country-info {
+  width: 100%;
   padding: 0rem 1.2rem 2.8rem 1.2rem;
 }
 .country-info h1 {
@@ -119,16 +128,9 @@ img {
   font-weight: 600;
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
-  /* border: 2px solid red; */
 }
 .nav-button:hover {
   outline: 3px solid gray;
-}
-
-@media screen and (min-width: 425px) {
-  .country-container-inner {
-    width: 350px;
-  }
 }
 @media screen and (min-width: 768px) {
   .searchContainer {
@@ -149,14 +151,16 @@ img {
   }
   .flag-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 9rem;
   }
   .country-container {
     margin: 2rem auto;
+    height: 440px;
   }
   .country-container-inner {
-    width: 215px;
+    width: 100%;
+
     margin-top: 0;
   }
   .single-country-container {
@@ -166,7 +170,6 @@ img {
     padding: 0;
     width: 100%;
     height: 60vh;
-    /* border: 2px solid red; */
     margin-top: -6rem;
   }
   .single-country-flag {
@@ -190,14 +193,18 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .searchContainer {
-    /* padding: 0 2rem; */
+    padding: 0 3rem;
   }
   .flag-section {
     padding: 0 2.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .flag-container > img {
-    min-height: 150px;
+    height: 230px;
+  }
+  .single-country-container {
+    justify-content: start;
+    margin-left: 2rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -205,12 +212,11 @@ img {
     padding: 1.6rem 5rem;
   }
   .searchContainer {
-    padding: 0 3.5rem;
+    padding: 0 2.5rem;
     margin-top: 1.4rem;
   }
   .search-container {
     width: 450px;
-    /* border: 2px solid red; */
   }
   .search-container input {
     width: 100%;
@@ -218,17 +224,14 @@ img {
   .filter-container {
     width: 15%;
   }
-  .country-container-inner {
-    width: 90%;
+  .country-container {
+    width: 85%;
+  }
+  img {
+    width: 100%;
   }
   .flag-section {
-    /* padding: 0 2.5rem; */
     margin-top: 12rem;
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 1440px) {
-  .country-container-inner {
-    width: 90%;
   }
 }

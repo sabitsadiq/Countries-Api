@@ -26,9 +26,9 @@ const SingleCountryInfo = () => {
       </Link>
       <div className="">
         {country &&
-          country.map((item, index) => {
+          country.map((item, population) => {
             return (
-              <section key={index}>
+              <section key={population}>
                 <div className="single-country-container">
                   <img
                     className="single-country-flag"

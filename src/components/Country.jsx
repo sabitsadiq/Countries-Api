@@ -55,7 +55,7 @@ function Country() {
                     <div className="country-container-inner">
                       <div className="flag-container">
                         <img
-                          className=""
+                          className="country-cont-flag"
                           src={country.flags.png}
                           alt={country.flags.alt}
                         />

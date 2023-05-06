@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import SingleCountryInfo from "./components/SingleCountryInfo";
 function App() {
   return (
-    <>
+    <div div className="main-wrapper">
       <Navbar />
       {
         <BrowserRouter>
@@ -15,7 +15,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       }
-    </>
+    </div>
   );
 }
 
