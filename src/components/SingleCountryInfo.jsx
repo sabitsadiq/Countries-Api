@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import GridLoader from "react-spinners/GridLoader";
+
 const SingleCountryInfo = () => {
   const [country, setCountry] = useState([]);
   const { name } = useParams();
-  // const { navigate } = useNavigate();
   const getSingleCountry = async () => {
     try {
       const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);

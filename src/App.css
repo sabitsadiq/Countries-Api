@@ -29,6 +29,14 @@
   background-color: hsl(0, 0%, 100%);
   box-shadow: 1px 1px 70px rgba(0 0 0 / 0.18);
 }
+.darkmode {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.moon {
+  width: 20px;
+}
 .navbar-text {
   display: flex;
   justify-content: space-between;

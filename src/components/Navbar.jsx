@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 function Navbar() {
   const [darkMode, setDarkMode] = useState("light");
@@ -20,7 +19,8 @@ function Navbar() {
     <div className={`navbar ${darkMode}`}>
       <div className="navbar-text">
         <p>Where is the world?</p>
-        <div onClick={handleMode}>
+        <div onClick={handleMode} className="darkmode">
+          <FontAwesomeIcon icon={faMoon} className="moon" size="xl" />
           <p>dark mode</p>
         </div>
       </div>
